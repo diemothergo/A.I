@@ -1,0 +1,509 @@
+====================================================================================================
+Time and space complexity report
+====================================================================================================
+
+====================================================================================================
+Time and Space Complexity Contrast Showing:
+====================================================================================================
+
+Experimental setup:
+  - Test cases per difficulty: 10
+  - Difficulty levels (moves): [5, 10, 15, 20]
+  - Time limit per run: 10.0s
+  - Algorithms: A* (H0), A* (H1), BFS
+
+====================================================================================================
+
+====================================================================================================
+Testing Difficulty Level: 5 moves from goal
+====================================================================================================
+
+Test Case 1/10:
+  Initial State: (1, 2, 3, 0, 5, 6, 4, 7, 8)
+  A* (H0 - Zero)       | Found: True  | Cost:    3.0 | Expanded:     277 | Time:      4.18ms | Memory:     86.34KB | MaxFrontier:     194
+  A* (H1 - Heuristic)  | Found: True  | Cost:    3.0 | Expanded:      16 | Time:      0.76ms | Memory:      5.55KB | MaxFrontier:      14
+  BFS                  | Found: True  | Cost:    3.0 | Expanded:      60 | Time:      0.57ms | Memory:      7.80KB | MaxFrontier:      43
+
+Test Case 2/10:
+  Initial State: (1, 2, 3, 0, 4, 5, 7, 8, 6)
+  A* (H0 - Zero)       | Found: True  | Cost:    3.0 | Expanded:     159 | Time:      1.86ms | Memory:     31.24KB | MaxFrontier:     110
+  A* (H1 - Heuristic)  | Found: True  | Cost:    3.0 | Expanded:      21 | Time:      0.73ms | Memory:      6.39KB | MaxFrontier:      18
+  BFS                  | Found: True  | Cost:    3.0 | Expanded:      38 | Time:      0.32ms | Memory:      5.56KB | MaxFrontier:      26
+
+Test Case 3/10:
+  Initial State: (1, 2, 3, 4, 5, 6, 7, 0, 8)
+  A* (H0 - Zero)       | Found: True  | Cost:    1.0 | Expanded:      17 | Time:      0.18ms | Memory:      5.14KB | MaxFrontier:      15
+  A* (H1 - Heuristic)  | Found: True  | Cost:    1.0 | Expanded:       7 | Time:      0.28ms | Memory:      3.85KB | MaxFrontier:       7
+  BFS                  | Found: True  | Cost:    1.0 | Expanded:       3 | Time:      0.02ms | Memory:      2.39KB | MaxFrontier:       2
+
+Test Case 4/10:
+  Initial State: (1, 2, 3, 0, 4, 6, 7, 5, 8)
+  A* (H0 - Zero)       | Found: True  | Cost:    3.0 | Expanded:     227 | Time:      2.74ms | Memory:     45.12KB | MaxFrontier:     157
+  A* (H1 - Heuristic)  | Found: True  | Cost:    3.0 | Expanded:      25 | Time:      0.91ms | Memory:      7.02KB | MaxFrontier:      22
+  BFS                  | Found: True  | Cost:    3.0 | Expanded:      52 | Time:      0.44ms | Memory:      5.91KB | MaxFrontier:      37
+
+Test Case 5/10:
+  Initial State: (1, 2, 3, 4, 5, 6, 7, 0, 8)
+  A* (H0 - Zero)       | Found: True  | Cost:    1.0 | Expanded:      17 | Time:      0.26ms | Memory:      5.05KB | MaxFrontier:      15
+  A* (H1 - Heuristic)  | Found: True  | Cost:    1.0 | Expanded:       7 | Time:      0.35ms | Memory:      3.77KB | MaxFrontier:       7
+  BFS                  | Found: True  | Cost:    1.0 | Expanded:       3 | Time:      0.03ms | Memory:      2.34KB | MaxFrontier:       2
+
+Test Case 6/10:
+  Initial State: (1, 2, 3, 4, 5, 6, 7, 0, 8)
+  A* (H0 - Zero)       | Found: True  | Cost:    1.0 | Expanded:      17 | Time:      0.23ms | Memory:      5.00KB | MaxFrontier:      15
+  A* (H1 - Heuristic)  | Found: True  | Cost:    1.0 | Expanded:       7 | Time:      0.29ms | Memory:      3.72KB | MaxFrontier:       7
+  BFS                  | Found: True  | Cost:    1.0 | Expanded:       3 | Time:      0.02ms | Memory:      2.31KB | MaxFrontier:       2
+
+Test Case 7/10:
+  Initial State: (1, 0, 3, 4, 2, 5, 7, 8, 6)
+  A* (H0 - Zero)       | Found: True  | Cost:    3.0 | Expanded:     141 | Time:      2.04ms | Memory:     28.63KB | MaxFrontier:     100
+  A* (H1 - Heuristic)  | Found: True  | Cost:    3.0 | Expanded:      15 | Time:      0.58ms | Memory:      5.06KB | MaxFrontier:      13
+  BFS                  | Found: True  | Cost:    3.0 | Expanded:      35 | Time:      0.39ms | Memory:      5.41KB | MaxFrontier:      23
+
+Test Case 8/10:
+  Initial State: (1, 2, 3, 4, 5, 0, 7, 8, 6)
+  A* (H0 - Zero)       | Found: True  | Cost:    1.0 | Expanded:      15 | Time:      0.18ms | Memory:      4.56KB | MaxFrontier:      13
+  A* (H1 - Heuristic)  | Found: True  | Cost:    1.0 | Expanded:       6 | Time:      0.24ms | Memory:      3.45KB | MaxFrontier:       6
+  BFS                  | Found: True  | Cost:    1.0 | Expanded:       3 | Time:      0.02ms | Memory:      2.26KB | MaxFrontier:       2
+
+Test Case 9/10:
+  Initial State: (1, 2, 3, 4, 5, 0, 7, 8, 6)
+  A* (H0 - Zero)       | Found: True  | Cost:    1.0 | Expanded:      15 | Time:      0.21ms | Memory:      4.51KB | MaxFrontier:      13
+  A* (H1 - Heuristic)  | Found: True  | Cost:    1.0 | Expanded:       6 | Time:      0.30ms | Memory:      3.41KB | MaxFrontier:       6
+  BFS                  | Found: True  | Cost:    1.0 | Expanded:       3 | Time:      0.02ms | Memory:      2.24KB | MaxFrontier:       2
+
+Test Case 10/10:
+  Initial State: (1, 0, 3, 4, 2, 5, 7, 8, 6)
+  A* (H0 - Zero)       | Found: True  | Cost:    3.0 | Expanded:     141 | Time:      1.86ms | Memory:     28.52KB | MaxFrontier:     100
+  A* (H1 - Heuristic)  | Found: True  | Cost:    3.0 | Expanded:      15 | Time:      0.54ms | Memory:      4.95KB | MaxFrontier:      13
+  BFS                  | Found: True  | Cost:    3.0 | Expanded:      35 | Time:      0.31ms | Memory:      5.37KB | MaxFrontier:      23
+
+====================================================================================================
+Testing Difficulty Level: 10 moves from goal
+====================================================================================================
+
+Test Case 1/10:
+  Initial State: (1, 2, 3, 4, 5, 6, 0, 7, 8)
+  A* (H0 - Zero)       | Found: True  | Cost:    2.0 | Expanded:      56 | Time:      0.60ms | Memory:     12.00KB | MaxFrontier:      45
+  A* (H1 - Heuristic)  | Found: True  | Cost:    2.0 | Expanded:      11 | Time:      0.45ms | Memory:      4.30KB | MaxFrontier:      10
+  BFS                  | Found: True  | Cost:    2.0 | Expanded:      12 | Time:      0.09ms | Memory:      3.01KB | MaxFrontier:       9
+
+Test Case 2/10:
+  Initial State: (1, 2, 3, 4, 0, 5, 7, 8, 6)
+  A* (H0 - Zero)       | Found: True  | Cost:    2.0 | Expanded:      72 | Time:      0.88ms | Memory:     15.21KB | MaxFrontier:      56
+  A* (H1 - Heuristic)  | Found: True  | Cost:    2.0 | Expanded:      11 | Time:      0.60ms | Memory:      4.28KB | MaxFrontier:      10
+  BFS                  | Found: True  | Cost:    2.0 | Expanded:      17 | Time:      0.19ms | Memory:      3.12KB | MaxFrontier:      13
+
+Test Case 3/10:
+  Initial State: (1, 2, 0, 4, 5, 3, 7, 8, 6)
+  A* (H0 - Zero)       | Found: True  | Cost:    2.0 | Expanded:      64 | Time:      0.79ms | Memory:     13.66KB | MaxFrontier:      52
+  A* (H1 - Heuristic)  | Found: True  | Cost:    2.0 | Expanded:      14 | Time:      0.76ms | Memory:      4.72KB | MaxFrontier:      12
+  BFS                  | Found: True  | Cost:    2.0 | Expanded:      13 | Time:      0.12ms | Memory:      3.02KB | MaxFrontier:      10
+
+Test Case 4/10:
+  Initial State: (1, 2, 3, 4, 5, 6, 7, 8, 0)
+  A* (H0 - Zero)       | Found: True  | Cost:    0.0 | Expanded:       0 | Time:      0.02ms | Memory:      0.43KB | MaxFrontier:       0
+  A* (H1 - Heuristic)  | Found: True  | Cost:    0.0 | Expanded:       0 | Time:      0.06ms | Memory:      0.88KB | MaxFrontier:       0
+  BFS                  | Found: True  | Cost:    0.0 | Expanded:       0 | Time:      0.00ms | Memory:      0.09KB | MaxFrontier:       0
+
+Test Case 5/10:
+  Initial State: (0, 2, 3, 1, 4, 5, 7, 8, 6)
+  A* (H0 - Zero)       | Found: True  | Cost:    4.0 | Expanded:     364 | Time:      5.66ms | Memory:     79.77KB | MaxFrontier:     231
+  A* (H1 - Heuristic)  | Found: True  | Cost:    4.0 | Expanded:      26 | Time:      0.92ms | Memory:      6.67KB | MaxFrontier:      20
+  BFS                  | Found: True  | Cost:    4.0 | Expanded:      91 | Time:      0.90ms | Memory:     16.06KB | MaxFrontier:      58
+
+Test Case 6/10:
+  Initial State: (1, 3, 0, 4, 2, 6, 7, 5, 8)
+  A* (H0 - Zero)       | Found: True  | Cost:    4.0 | Expanded:     243 | Time:      3.09ms | Memory:     47.10KB | MaxFrontier:     165
+  A* (H1 - Heuristic)  | Found: True  | Cost:    4.0 | Expanded:      20 | Time:      0.73ms | Memory:      5.70KB | MaxFrontier:      17
+  BFS                  | Found: True  | Cost:    4.0 | Expanded:      60 | Time:      0.59ms | Memory:      6.40KB | MaxFrontier:      40
+
+Test Case 7/10:
+  Initial State: (1, 2, 3, 4, 0, 6, 7, 5, 8)
+  A* (H0 - Zero)       | Found: True  | Cost:    2.0 | Expanded:     107 | Time:      1.25ms | Memory:     23.02KB | MaxFrontier:      84
+  A* (H1 - Heuristic)  | Found: True  | Cost:    2.0 | Expanded:      13 | Time:      0.46ms | Memory:      4.62KB | MaxFrontier:      12
+  BFS                  | Found: True  | Cost:    2.0 | Expanded:      24 | Time:      0.16ms | Memory:      5.09KB | MaxFrontier:      19
+
+Test Case 8/10:
+  Initial State: (0, 1, 2, 4, 5, 3, 7, 8, 6)
+  A* (H0 - Zero)       | Found: True  | Cost:    4.0 | Expanded:     273 | Time:      3.18ms | Memory:     51.37KB | MaxFrontier:     180
+  A* (H1 - Heuristic)  | Found: True  | Cost:    4.0 | Expanded:      32 | Time:      1.12ms | Memory:      7.66KB | MaxFrontier:      25
+  BFS                  | Found: True  | Cost:    4.0 | Expanded:      62 | Time:      0.58ms | Memory:      6.43KB | MaxFrontier:      42
+
+Test Case 9/10:
+  Initial State: (1, 2, 3, 4, 0, 6, 7, 5, 8)
+  A* (H0 - Zero)       | Found: True  | Cost:    2.0 | Expanded:     107 | Time:      1.45ms | Memory:     23.02KB | MaxFrontier:      84
+  A* (H1 - Heuristic)  | Found: True  | Cost:    2.0 | Expanded:      13 | Time:      0.46ms | Memory:      4.62KB | MaxFrontier:      12
+  BFS                  | Found: True  | Cost:    2.0 | Expanded:      24 | Time:      0.16ms | Memory:      5.09KB | MaxFrontier:      19
+
+Test Case 10/10:
+  Initial State: (1, 2, 3, 4, 5, 6, 7, 8, 0)
+  A* (H0 - Zero)       | Found: True  | Cost:    0.0 | Expanded:       0 | Time:      0.02ms | Memory:      0.43KB | MaxFrontier:       0
+  A* (H1 - Heuristic)  | Found: True  | Cost:    0.0 | Expanded:       0 | Time:      0.05ms | Memory:      0.88KB | MaxFrontier:       0
+  BFS                  | Found: True  | Cost:    0.0 | Expanded:       0 | Time:      0.00ms | Memory:      0.09KB | MaxFrontier:       0
+
+====================================================================================================
+Testing Difficulty Level: 15 moves from goal
+====================================================================================================
+
+Test Case 1/10:
+  Initial State: (4, 1, 3, 0, 2, 5, 7, 8, 6)
+  A* (H0 - Zero)       | Found: True  | Cost:    5.0 | Expanded:     714 | Time:      9.95ms | Memory:    178.92KB | MaxFrontier:     444
+  A* (H1 - Heuristic)  | Found: True  | Cost:    5.0 | Expanded:      21 | Time:      0.76ms | Memory:      5.85KB | MaxFrontier:      17
+  BFS                  | Found: True  | Cost:    5.0 | Expanded:     173 | Time:      2.13ms | Memory:     21.81KB | MaxFrontier:     108
+
+Test Case 2/10:
+  Initial State: (1, 2, 3, 4, 5, 6, 7, 0, 8)
+  A* (H0 - Zero)       | Found: True  | Cost:    1.0 | Expanded:      17 | Time:      0.20ms | Memory:      4.77KB | MaxFrontier:      15
+  A* (H1 - Heuristic)  | Found: True  | Cost:    1.0 | Expanded:       7 | Time:      0.28ms | Memory:      3.51KB | MaxFrontier:       7
+  BFS                  | Found: True  | Cost:    1.0 | Expanded:       3 | Time:      0.02ms | Memory:      2.24KB | MaxFrontier:       2
+
+Test Case 3/10:
+  Initial State: (1, 2, 3, 5, 6, 0, 4, 7, 8)
+  A* (H0 - Zero)       | Found: True  | Cost:    5.0 | Expanded:    1282 | Time:     19.59ms | Memory:    286.68KB | MaxFrontier:     737
+  A* (H1 - Heuristic)  | Found: True  | Cost:    5.0 | Expanded:      47 | Time:      1.62ms | Memory:     10.31KB | MaxFrontier:      38
+  BFS                  | Found: True  | Cost:    5.0 | Expanded:     311 | Time:      3.66ms | Memory:     63.91KB | MaxFrontier:     185
+
+Test Case 4/10:
+  Initial State: (1, 0, 3, 4, 2, 6, 7, 5, 8)
+  A* (H0 - Zero)       | Found: True  | Cost:    3.0 | Expanded:     187 | Time:      2.16ms | Memory:     37.43KB | MaxFrontier:     131
+  A* (H1 - Heuristic)  | Found: True  | Cost:    3.0 | Expanded:      18 | Time:      0.63ms | Memory:      5.48KB | MaxFrontier:      16
+  BFS                  | Found: True  | Cost:    3.0 | Expanded:      46 | Time:      0.39ms | Memory:      5.70KB | MaxFrontier:      31
+
+Test Case 5/10:
+  Initial State: (5, 4, 2, 1, 3, 0, 7, 8, 6)
+  A* (H0 - Zero)       | Found: True  | Cost:    9.0 | Expanded:   20474 | Time:    405.54ms | Memory:   5145.52KB | MaxFrontier:   10551
+  A* (H1 - Heuristic)  | Found: True  | Cost:    9.0 | Expanded:     438 | Time:     20.60ms | Memory:     82.49KB | MaxFrontier:     260
+  BFS                  | Found: True  | Cost:    9.0 | Expanded:    5288 | Time:     97.52ms | Memory:   1489.12KB | MaxFrontier:    2751
+
+Test Case 6/10:
+  Initial State: (2, 0, 3, 1, 5, 6, 4, 7, 8)
+  A* (H0 - Zero)       | Found: True  | Cost:    5.0 | Expanded:    1001 | Time:     14.04ms | Memory:    198.74KB | MaxFrontier:     616
+  A* (H1 - Heuristic)  | Found: True  | Cost:    5.0 | Expanded:      24 | Time:      1.64ms | Memory:      6.45KB | MaxFrontier:      20
+  BFS                  | Found: True  | Cost:    5.0 | Expanded:     230 | Time:      4.53ms | Memory:     21.94KB | MaxFrontier:     145
+
+Test Case 7/10:
+  Initial State: (1, 6, 2, 5, 3, 0, 4, 7, 8)
+  A* (H0 - Zero)       | Found: True  | Cost:    9.0 | Expanded:   21030 | Time:    492.62ms | Memory:   5281.46KB | MaxFrontier:   10531
+  A* (H1 - Heuristic)  | Found: True  | Cost:    9.0 | Expanded:     810 | Time:     33.01ms | Memory:    153.68KB | MaxFrontier:     459
+  BFS                  | Found: True  | Cost:    9.0 | Expanded:    5576 | Time:    100.53ms | Memory:   1503.27KB | MaxFrontier:    2803
+
+Test Case 8/10:
+  Initial State: (1, 2, 3, 5, 7, 6, 4, 0, 8)
+  A* (H0 - Zero)       | Found: True  | Cost:    5.0 | Expanded:    1378 | Time:     20.10ms | Memory:    243.19KB | MaxFrontier:     744
+  A* (H1 - Heuristic)  | Found: True  | Cost:    5.0 | Expanded:      60 | Time:      2.03ms | Memory:     12.90KB | MaxFrontier:      48
+  BFS                  | Found: True  | Cost:    5.0 | Expanded:     333 | Time:      3.87ms | Memory:     58.58KB | MaxFrontier:     192
+
+Test Case 9/10:
+  Initial State: (5, 0, 2, 1, 4, 3, 7, 8, 6)
+  A* (H0 - Zero)       | Found: True  | Cost:    7.0 | Expanded:    3844 | Time:     59.76ms | Memory:    809.83KB | MaxFrontier:    2067
+  A* (H1 - Heuristic)  | Found: True  | Cost:    7.0 | Expanded:     137 | Time:      5.18ms | Memory:     25.40KB | MaxFrontier:      88
+  BFS                  | Found: True  | Cost:    7.0 | Expanded:     983 | Time:     13.93ms | Memory:    100.21KB | MaxFrontier:     535
+
+Test Case 10/10:
+  Initial State: (1, 2, 3, 0, 4, 6, 7, 5, 8)
+  A* (H0 - Zero)       | Found: True  | Cost:    3.0 | Expanded:     227 | Time:      2.71ms | Memory:     44.45KB | MaxFrontier:     157
+  A* (H1 - Heuristic)  | Found: True  | Cost:    3.0 | Expanded:      25 | Time:      0.86ms | Memory:      6.72KB | MaxFrontier:      22
+  BFS                  | Found: True  | Cost:    3.0 | Expanded:      52 | Time:      0.43ms | Memory:      5.78KB | MaxFrontier:      37
+
+====================================================================================================
+Testing Difficulty Level: 20 moves from goal
+====================================================================================================
+
+Test Case 1/10:
+  Initial State: (3, 4, 5, 7, 1, 2, 8, 6, 0)
+  A* (H0 - Zero)       | Found: False | Cost:   -1.0 | Expanded:  345552 | Time:  10000.08ms | Memory:  77994.32KB | MaxFrontier:  139676
+  A* (H1 - Heuristic)  | Found: True  | Cost:   14.0 | Expanded:    9552 | Time:    432.72ms | Memory:   2382.26KB | MaxFrontier:    5343
+  BFS                  | Found: True  | Cost:   14.0 | Expanded:  135085 | Time:   4049.74ms | Memory:  32281.46KB | MaxFrontier:   52626
+
+Test Case 2/10:
+  Initial State: (1, 2, 0, 4, 6, 3, 7, 5, 8)
+  A* (H0 - Zero)       | Found: True  | Cost:    4.0 | Expanded:     346 | Time:      4.53ms | Memory:     68.09KB | MaxFrontier:     218
+  A* (H1 - Heuristic)  | Found: True  | Cost:    4.0 | Expanded:      23 | Time:      0.81ms | Memory:      6.27KB | MaxFrontier:      19
+  BFS                  | Found: True  | Cost:    4.0 | Expanded:      90 | Time:      0.86ms | Memory:     14.98KB | MaxFrontier:      57
+
+Test Case 3/10:
+  Initial State: (1, 5, 2, 4, 0, 3, 7, 8, 6)
+  A* (H0 - Zero)       | Found: True  | Cost:    4.0 | Expanded:     431 | Time:      5.62ms | Memory:     82.25KB | MaxFrontier:     258
+  A* (H1 - Heuristic)  | Found: True  | Cost:    4.0 | Expanded:      36 | Time:      1.27ms | Memory:      8.45KB | MaxFrontier:      29
+  BFS                  | Found: True  | Cost:    4.0 | Expanded:     107 | Time:      1.06ms | Memory:     15.17KB | MaxFrontier:      69
+
+Test Case 4/10:
+  Initial State: (0, 5, 2, 1, 4, 3, 7, 8, 6)
+  A* (H0 - Zero)       | Found: True  | Cost:    6.0 | Expanded:    2251 | Time:     34.90ms | Memory:    404.84KB | MaxFrontier:    1213
+  A* (H1 - Heuristic)  | Found: True  | Cost:    6.0 | Expanded:      74 | Time:      2.90ms | Memory:     14.39KB | MaxFrontier:      52
+  BFS                  | Found: True  | Cost:    6.0 | Expanded:     580 | Time:      7.44ms | Memory:     71.28KB | MaxFrontier:     325
+
+Test Case 5/10:
+  Initial State: (2, 3, 6, 1, 5, 8, 4, 7, 0)
+  A* (H0 - Zero)       | Found: True  | Cost:    8.0 | Expanded:    6865 | Time:    126.56ms | Memory:   1595.64KB | MaxFrontier:    3653
+  A* (H1 - Heuristic)  | Found: True  | Cost:    8.0 | Expanded:     156 | Time:      6.09ms | Memory:     30.16KB | MaxFrontier:     106
+  BFS                  | Found: True  | Cost:    8.0 | Expanded:    1695 | Time:     26.98ms | Memory:    252.98KB | MaxFrontier:     913
+
+Test Case 6/10:
+  Initial State: (2, 4, 3, 1, 8, 5, 0, 7, 6)
+  A* (H0 - Zero)       | Found: True  | Cost:    8.0 | Expanded:   10370 | Time:    193.60ms | Memory:   2586.88KB | MaxFrontier:    5764
+  A* (H1 - Heuristic)  | Found: True  | Cost:    8.0 | Expanded:     127 | Time:      4.49ms | Memory:     25.37KB | MaxFrontier:      89
+  BFS                  | Found: True  | Cost:    8.0 | Expanded:    2591 | Time:     38.16ms | Memory:    398.34KB | MaxFrontier:    1435
+
+Test Case 7/10:
+  Initial State: (1, 3, 6, 4, 0, 8, 7, 2, 5)
+  A* (H0 - Zero)       | Found: True  | Cost:    8.0 | Expanded:   23182 | Time:    573.67ms | Memory:   5731.85KB | MaxFrontier:   11653
+  A* (H1 - Heuristic)  | Found: True  | Cost:    8.0 | Expanded:     471 | Time:     20.34ms | Memory:     95.79KB | MaxFrontier:     315
+  BFS                  | Found: True  | Cost:    8.0 | Expanded:    5892 | Time:    126.20ms | Memory:   1575.52KB | MaxFrontier:    3049
+
+Test Case 8/10:
+  Initial State: (1, 2, 3, 5, 0, 6, 4, 7, 8)
+  A* (H0 - Zero)       | Found: True  | Cost:    4.0 | Expanded:     768 | Time:     11.39ms | Memory:    147.14KB | MaxFrontier:     445
+  A* (H1 - Heuristic)  | Found: True  | Cost:    4.0 | Expanded:      30 | Time:      1.36ms | Memory:      7.59KB | MaxFrontier:      26
+  BFS                  | Found: True  | Cost:    4.0 | Expanded:     181 | Time:      3.49ms | Memory:     18.61KB | MaxFrontier:     114
+
+Test Case 9/10:
+  Initial State: (2, 6, 5, 1, 0, 3, 4, 7, 8)
+  A* (H0 - Zero)       | Found: True  | Cost:   10.0 | Expanded:   33487 | Time:    717.31ms | Memory:   8276.66KB | MaxFrontier:   16719
+  A* (H1 - Heuristic)  | Found: True  | Cost:   10.0 | Expanded:     941 | Time:     37.21ms | Memory:    188.63KB | MaxFrontier:     579
+  BFS                  | Found: True  | Cost:   10.0 | Expanded:    8838 | Time:    163.38ms | Memory:   2235.76KB | MaxFrontier:    4439
+
+Test Case 10/10:
+  Initial State: (4, 1, 3, 7, 2, 5, 0, 8, 6)
+  A* (H0 - Zero)       | Found: True  | Cost:    6.0 | Expanded:    1359 | Time:     20.15ms | Memory:    259.61KB | MaxFrontier:     799
+  A* (H1 - Heuristic)  | Found: True  | Cost:    6.0 | Expanded:      24 | Time:      0.88ms | Memory:      6.49KB | MaxFrontier:      19
+  BFS                  | Found: True  | Cost:    6.0 | Expanded:     337 | Time:      4.25ms | Memory:     59.05KB | MaxFrontier:     200
+
+====================================================================================================
+Statistial Analysis
+====================================================================================================
+
+====================================================================================================
+Difficulty Level: 5 moves
+====================================================================================================
+
+A* (H0 - Zero):
+  Success Rate: 100.0% (10/10)
+  Avg Path Cost: 2.00
+  Avg Nodes Expanded: 102.60
+  Avg Time: 1.37 ms
+  Avg Memory: 24.41 KB
+  Avg Max Frontier Size: 73.20
+
+A* (H1 - Heuristic):
+  Success Rate: 100.0% (10/10)
+  Avg Path Cost: 2.00
+  Avg Nodes Expanded: 12.50
+  Avg Time: 0.50 ms
+  Avg Memory: 4.72 KB
+  Avg Max Frontier Size: 11.30
+
+BFS:
+  Success Rate: 100.0% (10/10)
+  Avg Path Cost: 2.00
+  Avg Nodes Expanded: 23.50
+  Avg Time: 0.21 ms
+  Avg Memory: 4.16 KB
+  Avg Max Frontier Size: 16.20
+
+====================================================================================================
+Difficulty Level: 10 moves
+====================================================================================================
+
+A* (H0 - Zero):
+  Success Rate: 100.0% (10/10)
+  Avg Path Cost: 2.20
+  Avg Nodes Expanded: 128.60
+  Avg Time: 1.69 ms
+  Avg Memory: 26.60 KB
+  Avg Max Frontier Size: 89.70
+
+A* (H1 - Heuristic):
+  Success Rate: 100.0% (10/10)
+  Avg Path Cost: 2.20
+  Avg Nodes Expanded: 14.00
+  Avg Time: 0.56 ms
+  Avg Memory: 4.43 KB
+  Avg Max Frontier Size: 11.80
+
+BFS:
+  Success Rate: 100.0% (10/10)
+  Avg Path Cost: 2.20
+  Avg Nodes Expanded: 30.30
+  Avg Time: 0.28 ms
+  Avg Memory: 4.84 KB
+  Avg Max Frontier Size: 21.00
+
+====================================================================================================
+Difficulty Level: 15 moves
+====================================================================================================
+
+A* (H0 - Zero):
+  Success Rate: 100.0% (10/10)
+  Avg Path Cost: 5.20
+  Avg Nodes Expanded: 5015.40
+  Avg Time: 102.67 ms
+  Avg Memory: 1223.10 KB
+  Avg Max Frontier Size: 2599.30
+
+A* (H1 - Heuristic):
+  Success Rate: 100.0% (10/10)
+  Avg Path Cost: 5.20
+  Avg Nodes Expanded: 158.70
+  Avg Time: 6.66 ms
+  Avg Memory: 31.28 KB
+  Avg Max Frontier Size: 97.50
+
+BFS:
+  Success Rate: 100.0% (10/10)
+  Avg Path Cost: 5.20
+  Avg Nodes Expanded: 1299.50
+  Avg Time: 22.70 ms
+  Avg Memory: 327.26 KB
+  Avg Max Frontier Size: 678.90
+
+====================================================================================================
+Difficulty Level: 20 moves
+====================================================================================================
+
+A* (H0 - Zero):
+  Success Rate: 90.0% (9/10)
+  Avg Path Cost: 6.44
+  Avg Nodes Expanded: 8784.33
+  Avg Time: 187.53 ms
+  Avg Memory: 2128.11 KB
+  Avg Max Frontier Size: 4524.67
+
+A* (H1 - Heuristic):
+  Success Rate: 100.0% (10/10)
+  Avg Path Cost: 7.20
+  Avg Nodes Expanded: 1143.40
+  Avg Time: 50.81 ms
+  Avg Memory: 276.54 KB
+  Avg Max Frontier Size: 657.70
+
+BFS:
+  Success Rate: 100.0% (10/10)
+  Avg Path Cost: 7.20
+  Avg Nodes Expanded: 15539.60
+  Avg Time: 442.16 ms
+  Avg Memory: 3692.32 KB
+  Avg Max Frontier Size: 6322.70
+
+====================================================================================================
+Comparative Analysis (Among Successful Cases)
+====================================================================================================
+
+Difficulty 5 moves:
+
+  Time Efficiency (lower is better):
+    1. BFS: 0.21 ms
+    2. A* (H1 - Heuristic): 0.50 ms
+    3. A* (H0 - Zero): 1.37 ms
+
+  Space Efficiency - Memory (lower is better):
+    1. BFS: 4.16 KB
+    2. A* (H1 - Heuristic): 4.72 KB
+    3. A* (H0 - Zero): 24.41 KB
+
+  Space Efficiency - Max Frontier Size (lower is better):
+    1. A* (H1 - Heuristic): 11.30 nodes
+    2. BFS: 16.20 nodes
+    3. A* (H0 - Zero): 73.20 nodes
+
+  Node Expansion Efficiency (lower is better):
+    1. A* (H1 - Heuristic): 12.50 nodes
+    2. BFS: 23.50 nodes
+    3. A* (H0 - Zero): 102.60 nodes
+
+Difficulty 10 moves:
+
+  Time Efficiency (lower is better):
+    1. BFS: 0.28 ms
+    2. A* (H1 - Heuristic): 0.56 ms
+    3. A* (H0 - Zero): 1.69 ms
+
+  Space Efficiency - Memory (lower is better):
+    1. A* (H1 - Heuristic): 4.43 KB
+    2. BFS: 4.84 KB
+    3. A* (H0 - Zero): 26.60 KB
+
+  Space Efficiency - Max Frontier Size (lower is better):
+    1. A* (H1 - Heuristic): 11.80 nodes
+    2. BFS: 21.00 nodes
+    3. A* (H0 - Zero): 89.70 nodes
+
+  Node Expansion Efficiency (lower is better):
+    1. A* (H1 - Heuristic): 14.00 nodes
+    2. BFS: 30.30 nodes
+    3. A* (H0 - Zero): 128.60 nodes
+
+Difficulty 15 moves:
+
+  Time Efficiency (lower is better):
+    1. A* (H1 - Heuristic): 6.66 ms
+    2. BFS: 22.70 ms
+    3. A* (H0 - Zero): 102.67 ms
+
+  Space Efficiency - Memory (lower is better):
+    1. A* (H1 - Heuristic): 31.28 KB
+    2. BFS: 327.26 KB
+    3. A* (H0 - Zero): 1223.10 KB
+
+  Space Efficiency - Max Frontier Size (lower is better):
+    1. A* (H1 - Heuristic): 97.50 nodes
+    2. BFS: 678.90 nodes
+    3. A* (H0 - Zero): 2599.30 nodes
+
+  Node Expansion Efficiency (lower is better):
+    1. A* (H1 - Heuristic): 158.70 nodes
+    2. BFS: 1299.50 nodes
+    3. A* (H0 - Zero): 5015.40 nodes
+
+Difficulty 20 moves:
+
+  Time Efficiency (lower is better):
+    1. A* (H1 - Heuristic): 50.81 ms
+    2. A* (H0 - Zero): 187.53 ms
+    3. BFS: 442.16 ms
+
+  Space Efficiency - Memory (lower is better):
+    1. A* (H1 - Heuristic): 276.54 KB
+    2. A* (H0 - Zero): 2128.11 KB
+    3. BFS: 3692.32 KB
+
+  Space Efficiency - Max Frontier Size (lower is better):
+    1. A* (H1 - Heuristic): 657.70 nodes
+    2. A* (H0 - Zero): 4524.67 nodes
+    3. BFS: 6322.70 nodes
+
+  Node Expansion Efficiency (lower is better):
+    1. A* (H1 - Heuristic): 1143.40 nodes
+    2. A* (H0 - Zero): 8784.33 nodes
+    3. BFS: 15539.60 nodes
+
+====================================================================================================
+Summary Table
+====================================================================================================
+
+Difficulty   | Algorithm            | Success%   | Avg Time(ms)    | Avg Expanded   
+----------------------------------------------------------------------------------------------------
+5            | A* (H0 - Zero)       |     100.0% |           1.37 |         102.60
+5            | A* (H1 - Heuristic)  |     100.0% |           0.50 |          12.50
+5            | BFS                  |     100.0% |           0.21 |          23.50
+10           | A* (H0 - Zero)       |     100.0% |           1.69 |         128.60
+10           | A* (H1 - Heuristic)  |     100.0% |           0.56 |          14.00
+10           | BFS                  |     100.0% |           0.28 |          30.30
+15           | A* (H0 - Zero)       |     100.0% |         102.67 |        5015.40
+15           | A* (H1 - Heuristic)  |     100.0% |           6.66 |         158.70
+15           | BFS                  |     100.0% |          22.70 |        1299.50
+20           | A* (H0 - Zero)       |      90.0% |         187.53 |        8784.33
+20           | A* (H1 - Heuristic)  |     100.0% |          50.81 |        1143.40
+20           | BFS                  |     100.0% |         442.16 |       15539.60
+
+====================================================================================================
+Expermient Complete.
+====================================================================================================
+
+Key Findings:
+  1. A* with H1 expands fewer nodes than H0.
+  2. H0 behaves like Uniform Cost Search.
+  3. BFS explores more nodes but guarantees optimal solution.
+  4. Time complexity ∝ nodes expanded.
+  5. Space complexity shown by max frontier size and memory usage.

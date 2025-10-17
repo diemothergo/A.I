@@ -1,0 +1,61 @@
+classDiagram
+    class PuzzleProblem {
+        
+        # __init__()
+        + initial_state()
+        + is_goal()
+        + successors()
+    }
+    class _Node {
+        
+        + state
+        + g
+        + action
+        + parent
+    }
+    class _PQItem {
+        
+        + priority
+        + count
+        + item
+    }
+    class _PriorityQueue {
+        
+        # __init__()
+        + push()
+        + pop()
+        + empty()
+        # __len__()
+    }
+    class _Metrics {
+        
+        + expanded
+        + max_fringe
+        + time_ms
+    }
+    class ClassInfo {
+        
+        + name
+        + module
+        + bases
+        + methods
+        + attributes
+    }
+    class ClassDiagramGenerator {
+        
+        # __init__()
+        + analyze_project()
+        # _analyze_file()
+        # _extract_class_info()
+        # _get_base_name()
+        # _detect_relationships()
+        + generate_mermaid()
+        + generate_plantuml()
+    }
+    class Metrics {
+        
+        + expanded
+        + max_fringe
+        + time_ms
+        + peak_memory_bytes
+    }

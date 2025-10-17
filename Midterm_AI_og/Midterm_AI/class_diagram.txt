@@ -1,0 +1,63 @@
+============================================================
+Class Diagram for task 1
+============================================================
+
+[PuzzleProblem]
+  Methods:
+    # __init__()
+    + initial_state()
+    + is_goal()
+    + successors()
+
+[_Node]
+  Attributes:
+    + state
+    + g
+    + action
+    + parent
+
+[_PQItem]
+  Attributes:
+    + priority
+    + count
+    + item
+
+[_PriorityQueue]
+  Methods:
+    # __init__()
+    + push()
+    + pop()
+    + empty()
+    # __len__()
+
+[_Metrics]
+  Attributes:
+    + expanded
+    + max_fringe
+    + time_ms
+
+[ClassInfo]
+  Attributes:
+    + name
+    + module
+    + bases
+    + methods
+    + attributes
+
+[ClassDiagramGenerator]
+  Methods:
+    # __init__()
+    + analyze_project()
+    # _analyze_file()
+    # _extract_class_info()
+    # _get_base_name()
+    # _detect_relationships()
+    + generate_mermaid()
+    + generate_plantuml()
+
+[Metrics]
+  Attributes:
+    + expanded
+    + max_fringe
+    + time_ms
+    + peak_memory_bytes
