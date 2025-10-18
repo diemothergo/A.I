@@ -1,13 +1,8 @@
-# pacman_game_final.py
-# FINAL VERSION — AI with Step-by-Step Reaction & Correct Teleport Logic
 
 import sys, os, pygame, time, random
 from collections import deque, namedtuple
 import heapq
 
-# ===================================================================
-# FIX UNICODE OUTPUT ON WINDOWS
-# ===================================================================
 if sys.stdout.encoding != 'utf-8':
     try:
         sys.stdout.reconfigure(encoding='utf-8')
@@ -15,9 +10,6 @@ if sys.stdout.encoding != 'utf-8':
     except Exception:
         pass
 
-# ===================================================================
-# CONSTANTS & COLORS
-# ===================================================================
 CELL_SIZE = 24
 FPS = 18
 BLACK, WHITE, BLUE, YELLOW, RED, GREEN, GREY, ORANGE, GHOST_BLUE, EXIT_COLOR = (
@@ -25,9 +17,6 @@ BLACK, WHITE, BLUE, YELLOW, RED, GREEN, GREY, ORANGE, GHOST_BLUE, EXIT_COLOR = (
     (0,255,0), (120,120,120), (255,165,0), (0,0,205), (0,255,255)
 )
 
-# ===================================================================
-# A* SOLVER
-# ===================================================================
 class AStarSolver:
     def __init__(self, problem): self.problem = problem
     def heuristic(self, a, b): return self.problem.get_dist(a, b)
